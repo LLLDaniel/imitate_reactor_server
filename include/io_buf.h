@@ -17,14 +17,15 @@ class IoBuf {
 
         void Copy(const IoBuf* other);
 
-    private:
+        IoBuf* next_;
+
         int capacity_;
         // the avaibled memory length
         int length_;
         // the unresolved data header index
         int head_;
+
+    private:
         // the buff header pointer
         char* data_;
-
-        IoBuf* next_;
 };
